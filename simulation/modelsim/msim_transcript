@@ -1,0 +1,218 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do risc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:47 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity risc
+# -- Compiling architecture BHV of risc
+# End time: 01:00:47 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:47 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture BHV of alu
+# End time: 01:00:47 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ir
+# -- Compiling architecture BHV of ir
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cu
+# -- Compiling architecture BHV of cu
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture BHV of PC
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gpreg
+# -- Compiling architecture BHV of gpreg
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux
+# -- Compiling architecture BHV of mux
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2
+# -- Compiling architecture BHV of mux2
+# End time: 01:00:48 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:48 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux3
+# -- Compiling architecture BHV of mux3
+# End time: 01:00:49 on Jul 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:49 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4
+# -- Compiling architecture BHV of mux4
+# End time: 01:00:49 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:49 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity squen
+# -- Compiling architecture mealy of squen
+# End time: 01:00:49 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:00:49 on Jul 03,2020
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity risc_vhd_tst
+# -- Compiling architecture risc_arch of risc_vhd_tst
+# End time: 01:00:49 on Jul 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  risc_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" risc_tb 
+# Start time: 01:00:49 on Jul 03,2020
+# ** Error: (vsim-3170) Could not find 'risc_tb'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/altera
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/220model
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/sgate
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/altera_mf
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/altera_lnsim
+#             C:/intelFPGA_lite/19.1/modelsim_ase/altera/vhdl/cyclonev
+#             C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/rtl_work
+#             C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./risc_run_msim_rtl_vhdl.do PAUSED at line 22
+vsim work.risc_vhd_tst
+# vsim work.risc_vhd_tst 
+# Start time: 01:00:49 on Jul 03,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.risc_vhd_tst(risc_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.risc(bhv)
+# Loading work.ir(bhv)
+# Loading work.cu(bhv)
+# Loading work.mux4(bhv)
+# Loading work.gpreg(bhv)
+# Loading work.mux(bhv)
+# Loading work.alu(bhv)
+# Loading work.mux3(bhv)
+# Loading work.mux2(bhv)
+# Loading work.pc(bhv)
+# Loading work.squen(mealy)
+add wave -position end  sim:/risc_vhd_tst/agb
+add wave -position end  sim:/risc_vhd_tst/alb
+add wave -position end  sim:/risc_vhd_tst/az
+add wave -position end  sim:/risc_vhd_tst/bz
+add wave -position end  sim:/risc_vhd_tst/clk
+add wave -position end  sim:/risc_vhd_tst/equal
+add wave -position end  sim:/risc_vhd_tst/ins
+add wave -position end  sim:/risc_vhd_tst/mem_read
+add wave -position end  sim:/risc_vhd_tst/mem_write
+add wave -position end  sim:/risc_vhd_tst/O_add
+add wave -position end  sim:/risc_vhd_tst/O_data
+add wave -position end  sim:/risc_vhd_tst/res
+add wave -position end  sim:/risc_vhd_tst/seq
+add wave -position end  sim:/risc_vhd_tst/state
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 01:03:39 on Jul 03,2020, Elapsed time: 0:02:50
+# Errors: 1, Warnings: 0

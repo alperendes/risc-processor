@@ -1,0 +1,94 @@
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+
+ENTITY risc_vhd_tst IS
+END risc_vhd_tst;
+ARCHITECTURE risc_arch OF risc_vhd_tst IS
+-- constants                                                 
+-- signals                                                   
+SIGNAL agb : STD_LOGIC;
+SIGNAL alb : STD_LOGIC;
+SIGNAL az : STD_LOGIC;
+SIGNAL bz : STD_LOGIC;
+SIGNAL clk : STD_LOGIC;
+SIGNAL equal : STD_LOGIC;
+SIGNAL ins : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL mem_read : STD_LOGIC;
+SIGNAL mem_write : STD_LOGIC;
+SIGNAL O_add : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL O_data : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL res : STD_LOGIC;
+SIGNAL state : STD_LOGIC_VECTOR(3 DOWNTO 0);
+COMPONENT risc
+	PORT (
+	agb : BUFFER STD_LOGIC;
+	alb : BUFFER STD_LOGIC;
+	az : BUFFER STD_LOGIC;
+	bz : BUFFER STD_LOGIC;
+	clk : IN STD_LOGIC;
+	equal : BUFFER STD_LOGIC;
+	ins : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	mem_read : BUFFER STD_LOGIC;
+	mem_write : BUFFER STD_LOGIC;
+	O_add : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	O_data : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	res : IN STD_LOGIC;
+	state : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END COMPONENT;
+BEGIN
+	i1 : risc
+	PORT MAP (
+-- list connections between master ports and signals
+	agb => agb,
+	alb => alb,
+	az => az,
+	bz => bz,
+	clk => clk,
+	equal => equal,
+	ins => ins,
+	mem_read => mem_read,
+	mem_write => mem_write,
+	O_add => O_add,
+	O_data => O_data,
+	res => res,
+	state => state
+	);
+init : PROCESS                                               
+-- variable declarations                                     
+BEGIN                                                        
+        -- code that executes only once
+		  res <= '1';
+		  wait for 50 ps;
+		  res <= '0';
+		  wait for 50 ps;
+		  clk <= '0';
+		  wait for 25 ps;
+		  ins <= "0000010110100101";
+		  clk <= '1';
+		  wait for 25 ps;
+		  clk <= '0';
+		  ins <= "0110010110100101";
+		  clk <= '1';
+		  wait for 25 ps;
+		  clk <= '0';
+		  ins< = "1010000010101111";
+		  clk <= '1';
+		  wait for 25 ps;
+		  clk <= '0';
+		  ins <= "1001000000000000";
+		  clk <= '1';
+		  wait for 25 ps;
+		  clk <= '0';
+		  wait for 25 ps;
+WAIT;                                                       
+END PROCESS init;                                           
+always : PROCESS                                              
+-- optional sensitivity list                                  
+-- (        )                                                 
+-- variable declarations                                      
+BEGIN                                                         
+        -- code executes for every event on sensitivity list  
+WAIT;                                                        
+END PROCESS always;                                          
+END risc_arch;

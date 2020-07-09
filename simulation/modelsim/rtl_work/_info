@@ -1,0 +1,492 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim
+Ealu
+Z1 w1593722540
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd
+Z6 FC:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd
+l0
+L4
+V[AjFiQ_fUn>Fz`bXUFIjk0
+!s100 o=YKi`]ciMKnLH@f2ZSB72
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1593727247
+!i10b 1
+Z9 !s108 1593727247.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd|
+Z11 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abhv
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 [AjFiQ_fUn>Fz`bXUFIjk0
+l19
+L16
+VA;ELSX=FlJ`mSXk]Sm7W71
+!s100 6]dCL2OVE5IT2El15ZZ<e2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecu
+R1
+R2
+R3
+R4
+R0
+Z14 8C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd
+Z15 FC:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd
+l0
+L6
+VZbHfl7DgzWji7K0NL04PC1
+!s100 D:D>IJG>nPiLci_?JWM^N0
+R7
+31
+Z16 !s110 1593727248
+!i10b 1
+Z17 !s108 1593727248.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd|
+Z19 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 2 cu 0 22 ZbHfl7DgzWji7K0NL04PC1
+l28
+L26
+VF[6I8X>m<?MPc=9KN3dX13
+!s100 QdK=O>WSIGEbg9>IY8`<10
+R7
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Egpreg
+Z20 w1592689377
+R2
+R3
+R4
+R0
+Z21 8C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd
+Z22 FC:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd
+l0
+L4
+VYD6Tb<EXYCCYDgmX;W>z?3
+!s100 >[aTKC2FdXLZ3Z5ZBXU9D2
+R7
+31
+R16
+!i10b 1
+R17
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd|
+Z24 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 5 gpreg 0 22 YD6Tb<EXYCCYDgmX;W>z?3
+l17
+L14
+V0WMNF6gVoY<?LaaZe640f1
+!s100 h=P@WFe]P0W:2ff9FEm3S2
+R7
+31
+R16
+!i10b 1
+R17
+R23
+R24
+!i113 1
+R12
+R13
+Eir
+Z25 w1592687586
+R2
+R3
+R4
+R0
+Z26 8C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd
+Z27 FC:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd
+l0
+L4
+V=k>zdSho4[z2FZ^meS6Gk1
+!s100 @n>LZOZL?3R>hd9izE[<h1
+R7
+31
+R16
+!i10b 1
+R17
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd|
+Z29 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 2 ir 0 22 =k>zdSho4[z2FZ^meS6Gk1
+l15
+L14
+V@jEe1IoFUM92WQ]lT3LEI0
+!s100 Dk8K[Ng5k5U9WUn_zXKI22
+R7
+31
+R16
+!i10b 1
+R17
+R28
+R29
+!i113 1
+R12
+R13
+Emux
+Z30 w1592077695
+R3
+R4
+R0
+Z31 8C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd
+Z32 FC:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd
+l0
+L4
+VKEML?9]bYHZh76XNc=G@10
+!s100 WC=TRMK]T:RLgladM928L0
+R7
+31
+R16
+!i10b 1
+R17
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd|
+Z34 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 3 mux 0 22 KEML?9]bYHZh76XNc=G@10
+l12
+L11
+V@@z[43_oD@T1_Wlk=K8PC0
+!s100 agEfc7gQW1UXna7i1GM>D1
+R7
+31
+R16
+!i10b 1
+R17
+R33
+R34
+!i113 1
+R12
+R13
+Emux2
+Z35 w1591969628
+R3
+R4
+R0
+Z36 8C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd
+Z37 FC:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd
+l0
+L4
+VbM1EEboVS8jZmNVo:5aJP0
+!s100 V3ZIemCi;5boMdz>X1[6T0
+R7
+31
+R16
+!i10b 1
+R17
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd|
+Z39 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 4 mux2 0 22 bM1EEboVS8jZmNVo:5aJP0
+l12
+L11
+V9J4PhiM8fF9WCn9CbUgR20
+!s100 ]61@`DZC2_6b^AgB:2NWC0
+R7
+31
+R16
+!i10b 1
+R17
+R38
+R39
+!i113 1
+R12
+R13
+Emux3
+Z40 w1591969656
+R3
+R4
+R0
+Z41 8C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd
+Z42 FC:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd
+l0
+L4
+V?k<f=_E5BlZfJ8z2@2PP[3
+!s100 ^lL7kYz6lB8^4oEX6F]D60
+R7
+31
+R16
+!i10b 1
+R17
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd|
+Z44 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 4 mux3 0 22 ?k<f=_E5BlZfJ8z2@2PP[3
+l12
+L11
+VViS<XnT[_4UF`Qk8FCJY10
+!s100 m`N6b;dLGT8>zD68cKd5U0
+R7
+31
+R16
+!i10b 1
+R17
+R43
+R44
+!i113 1
+R12
+R13
+Emux4
+Z45 w1592077832
+R3
+R4
+R0
+Z46 8C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd
+Z47 FC:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd
+l0
+L4
+Vz3XG0d4h62dzWn4Jd_zR]3
+!s100 ;jIeP3WgacGF[UEg_DW?E3
+R7
+31
+Z48 !s110 1593727249
+!i10b 1
+Z49 !s108 1593727249.000000
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd|
+Z51 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 4 mux4 0 22 z3XG0d4h62dzWn4Jd_zR]3
+l12
+L11
+V9@k?bc5[ZhSnmig?K>KWd2
+!s100 dQJJ`>b_S>9gi;h>endfI1
+R7
+31
+R48
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R12
+R13
+Epc
+Z52 w1593726266
+R2
+R3
+R4
+R0
+Z53 8C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd
+Z54 FC:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd
+l0
+L4
+VOSS>57OP`cb9fXWi<fBzn0
+!s100 0VIS0oE?KL:f6BCfh`Zkf2
+R7
+31
+R16
+!i10b 1
+R17
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd|
+Z56 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 2 pc 0 22 OSS>57OP`cb9fXWi<fBzn0
+l14
+L12
+V=9L[M2:cK?hn`:0U;9znU3
+!s100 1ITmBYIC^bLjL:0<]K;0b3
+R7
+31
+R16
+!i10b 1
+R17
+R55
+R56
+!i113 1
+R12
+R13
+Erisc
+Z57 w1593727004
+R2
+R3
+R4
+R0
+Z58 8C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd
+Z59 FC:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd
+l0
+L5
+V=mQFaX5;>6@f]a]_RFeFU3
+!s100 ^N<54QWnRF_:U^X^73m7g0
+R7
+31
+R8
+!i10b 1
+R9
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd|
+Z61 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 4 risc 0 22 =mQFaX5;>6@f]a]_RFeFU3
+l138
+L17
+Vmcc6l0G=WRgb1]W`U`X423
+!s100 [X<?dXDNb=kaReG80]FN[0
+R7
+31
+R8
+!i10b 1
+R9
+R60
+R61
+!i113 1
+R12
+R13
+Erisc_vhd_tst
+Z62 w1593727213
+R3
+R4
+R0
+Z63 8C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht
+Z64 FC:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht
+l0
+L31
+VG=FbR=9]n0oB;K?hEZnN<3
+!s100 MTUJ53C7`h^gfaOOlO4e:2
+R7
+31
+R48
+!i10b 1
+R49
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht|
+Z66 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/simulation/modelsim/risc.vht|
+!i113 1
+R12
+R13
+Arisc_arch
+R3
+R4
+DEx4 work 12 risc_vhd_tst 0 22 G=FbR=9]n0oB;K?hEZnN<3
+l68
+L33
+Vkal1V4<7^WCMTCgGLnn1D0
+!s100 U>761DY1XUCE8J^J[ao3@2
+R7
+31
+R48
+!i10b 1
+R49
+R65
+R66
+!i113 1
+R12
+R13
+Esquen
+Z67 w1593715819
+R2
+R3
+R4
+R0
+Z68 8C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd
+Z69 FC:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd
+l0
+L6
+V7=2U^_OUAD_ziHlCQNP[>0
+!s100 AhhVQMDP1ogUI0:oC@`EG0
+R7
+31
+R48
+!i10b 1
+R49
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd|
+Z71 !s107 C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd|
+!i113 1
+R12
+R13
+Amealy
+R2
+R3
+R4
+DEx4 work 5 squen 0 22 7=2U^_OUAD_ziHlCQNP[>0
+l18
+L12
+VBn`R?`^biKo[ZjG?1gidN1
+!s100 VgIUiXa<^Rgezd[gRJaf=2
+R7
+31
+R48
+!i10b 1
+R49
+R70
+R71
+!i113 1
+R12
+R13

@@ -1,0 +1,257 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seq",
+					"strict" : false
+				},
+				{
+					"name" : "equal",
+					"strict" : false
+				},
+				{
+					"name" : "az",
+					"strict" : false
+				},
+				{
+					"name" : "bz",
+					"strict" : false
+				},
+				{
+					"name" : "agb",
+					"strict" : false
+				},
+				{
+					"name" : "alb",
+					"strict" : false
+				},
+				{
+					"name" : "mem_read",
+					"strict" : false
+				},
+				{
+					"name" : "mem_write",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[0]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[7]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[8]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[9]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[10]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[11]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[12]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[13]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[14]",
+					"strict" : false
+				},
+				{
+					"name" : "O_add[15]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "res",
+					"strict" : false
+				},
+				{
+					"name" : "ins[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ins[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

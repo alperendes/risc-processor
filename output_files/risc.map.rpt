@@ -1,0 +1,591 @@
+Analysis & Synthesis report for risc
+Fri Jul 03 01:00:30 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "mux2:m8"
+ 13. Port Connectivity Checks: "alu:m6"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jul 03 01:00:30 2020       ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                   ; risc                                        ;
+; Top-level Entity Name           ; risc                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 77                                          ;
+; Total pins                      ; 62                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; risc               ; risc               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; risc.vhd                         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd  ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd   ;         ;
+; ir.vhd                           ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd    ;         ;
+; cu.vhd                           ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd    ;         ;
+; pc.vhd                           ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd    ;         ;
+; gpreg.vhd                        ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd   ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd  ;         ;
+; mux3.vhd                         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd  ;         ;
+; mux4.vhd                         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd  ;         ;
+; squen.vhd                        ; yes             ; User VHDL File  ; C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 176            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 274            ;
+;     -- 7 input functions                    ; 15             ;
+;     -- 6 input functions                    ; 59             ;
+;     -- 5 input functions                    ; 28             ;
+;     -- 4 input functions                    ; 81             ;
+;     -- <=3 input functions                  ; 91             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 77             ;
+;                                             ;                ;
+; I/O pins                                    ; 62             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; cu:m2|alu_src1 ;
+; Maximum fan-out                             ; 86             ;
+; Total fan-out                               ; 1550           ;
+; Average fan-out                             ; 3.26           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |risc                      ; 274 (68)            ; 77 (0)                    ; 0                 ; 0          ; 62   ; 0            ; |risc               ; risc        ; work         ;
+;    |PC:m10|                ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |risc|PC:m10        ; PC          ; work         ;
+;    |alu:m6|                ; 145 (145)           ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |risc|alu:m6        ; alu         ; work         ;
+;    |cu:m2|                 ; 7 (7)               ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |risc|cu:m2         ; cu          ; work         ;
+;    |gpreg:m4|              ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |risc|gpreg:m4      ; gpreg       ; work         ;
+;    |ir:m1|                 ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |risc|ir:m1         ; ir          ; work         ;
+;    |mux2:m8|               ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |risc|mux2:m8       ; mux2        ; work         ;
+;    |mux3:m7|               ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |risc|mux3:m7       ; mux3        ; work         ;
+;    |mux4:m3|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |risc|mux4:m3       ; mux4        ; work         ;
+;    |squen:m12|             ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |risc|squen:m12     ; squen       ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; O_data[0]$latch                                     ; Mux49               ; yes                    ;
+; O_data[1]$latch                                     ; Mux49               ; yes                    ;
+; O_data[2]$latch                                     ; Mux49               ; yes                    ;
+; O_data[3]$latch                                     ; Mux49               ; yes                    ;
+; O_data[4]$latch                                     ; Mux49               ; yes                    ;
+; O_data[5]$latch                                     ; Mux49               ; yes                    ;
+; O_data[6]$latch                                     ; Mux49               ; yes                    ;
+; O_data[7]$latch                                     ; Mux49               ; yes                    ;
+; O_data[8]$latch                                     ; Mux49               ; yes                    ;
+; O_data[9]$latch                                     ; Mux49               ; yes                    ;
+; O_data[10]$latch                                    ; Mux49               ; yes                    ;
+; O_data[11]$latch                                    ; Mux49               ; yes                    ;
+; O_data[12]$latch                                    ; Mux49               ; yes                    ;
+; O_data[13]$latch                                    ; Mux49               ; yes                    ;
+; O_data[14]$latch                                    ; Mux49               ; yes                    ;
+; O_data[15]$latch                                    ; Mux49               ; yes                    ;
+; temp[0]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[1]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[2]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[3]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[4]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[5]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[6]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[7]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[8]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[9]                                             ; cu:m2|Mux5          ; yes                    ;
+; temp[10]                                            ; cu:m2|Mux5          ; yes                    ;
+; temp[11]                                            ; cu:m2|Mux5          ; yes                    ;
+; temp[12]                                            ; cu:m2|Mux5          ; yes                    ;
+; temp[13]                                            ; cu:m2|Mux5          ; yes                    ;
+; temp[14]                                            ; cu:m2|Mux5          ; yes                    ;
+; temp[15]                                            ; cu:m2|Mux5          ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; gpreg:m4|O_dataA[4..15]                ; Stuck at GND due to stuck port data_in ;
+; gpreg:m4|O_dataB[4..15]                ; Stuck at GND due to stuck port data_in ;
+; cu:m2|pc_src                           ; Lost fanout                            ;
+; cu:m2|alu_src2[0]                      ; Stuck at GND due to stuck port data_in ;
+; ir:m1|Op_code[3]                       ; Merged with ir:m1|Immediate[15]        ;
+; ir:m1|Op_code[2]                       ; Merged with ir:m1|Immediate[14]        ;
+; ir:m1|Op_code[1]                       ; Merged with ir:m1|Immediate[13]        ;
+; ir:m1|Op_code[0]                       ; Merged with ir:m1|Immediate[12]        ;
+; cu:m2|pc_wr                            ; Merged with cu:m2|alu_src1             ;
+; ir:m1|Sel_s1[0]                        ; Merged with ir:m1|Immediate[4]         ;
+; cu:m2|rs2_sel                          ; Merged with cu:m2|pc_cond              ;
+; ir:m1|Sel_s1[1]                        ; Merged with ir:m1|Immediate[5]         ;
+; ir:m1|Sel_s1[2]                        ; Merged with ir:m1|Immediate[6]         ;
+; ir:m1|Sel_s1[3]                        ; Merged with ir:m1|Immediate[7]         ;
+; ir:m1|Sel_sd[3]                        ; Merged with ir:m1|Immediate[11]        ;
+; ir:m1|Sel_sd[2]                        ; Merged with ir:m1|Immediate[10]        ;
+; ir:m1|Sel_sd[1]                        ; Merged with ir:m1|Immediate[9]         ;
+; ir:m1|Sel_sd[0]                        ; Merged with ir:m1|Immediate[8]         ;
+; ir:m1|Sel_s2[3]                        ; Merged with ir:m1|Immediate[3]         ;
+; ir:m1|Sel_s2[2]                        ; Merged with ir:m1|Immediate[2]         ;
+; ir:m1|Sel_s2[1]                        ; Merged with ir:m1|Immediate[1]         ;
+; ir:m1|Sel_s2[0]                        ; Merged with ir:m1|Immediate[0]         ;
+; Total Number of Removed Registers = 44 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |risc|alu:m6|teq           ;
+; 14:1               ; 14 bits   ; 126 LEs       ; 70 LEs               ; 56 LEs                 ; Yes        ; |risc|alu:m6|O[1]          ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |risc|Mux45                ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |risc|Mux7                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |risc|Mux16                ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; No         ; |risc|Mux36                ;
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |risc|Mux0                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "mux2:m8"        ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[3..0]  ; Input ; Info     ; Stuck at VCC ;
+; b[15..4] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:m6"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; rd   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 77                          ;
+;     ENA               ; 20                          ;
+;     ENA SCLR          ; 1                           ;
+;     ENA SLD           ; 14                          ;
+;     SLD               ; 16                          ;
+;     plain             ; 26                          ;
+; arriav_lcell_comb     ; 274                         ;
+;     arith             ; 66                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 16                          ;
+;         4 data inputs ; 48                          ;
+;     extend            ; 15                          ;
+;         7 data inputs ; 15                          ;
+;     normal            ; 193                         ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 59                          ;
+; boundary_port         ; 62                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 3.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Fri Jul 03 01:00:13 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off risc -c risc
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file risc.vhd
+    Info (12022): Found design unit 1: risc-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 17
+    Info (12023): Found entity 1: risc File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd Line: 16
+    Info (12023): Found entity 1: alu File: C:/intelFPGA_lite/19.17/termprojectvol2/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: ir-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 14
+    Info (12023): Found entity 1: ir File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cu.vhd
+    Info (12022): Found design unit 1: cu-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd Line: 26
+    Info (12023): Found entity 1: cu File: C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd Line: 12
+    Info (12023): Found entity 1: PC File: C:/intelFPGA_lite/19.17/termprojectvol2/pc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file gpreg.vhd
+    Info (12022): Found design unit 1: gpreg-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd Line: 14
+    Info (12023): Found entity 1: gpreg File: C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd Line: 4
+Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus Prime megafunction library File: C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: mux-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd Line: 11
+    Info (12023): Found entity 1: mux File: C:/intelFPGA_lite/19.17/termprojectvol2/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
+    Info (12022): Found design unit 1: mux2-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux3.vhd
+    Info (12022): Found design unit 1: mux3-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd Line: 11
+    Info (12023): Found entity 1: mux3 File: C:/intelFPGA_lite/19.17/termprojectvol2/mux3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: mux4-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd Line: 11
+    Info (12023): Found entity 1: mux4 File: C:/intelFPGA_lite/19.17/termprojectvol2/mux4.vhd Line: 4
+Warning (12019): Can't analyze file -- file memory.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-BHV File: C:/intelFPGA_lite/19.17/termprojectvol2/ram.vhd Line: 18
+    Info (12023): Found entity 1: ram File: C:/intelFPGA_lite/19.17/termprojectvol2/ram.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file squen.vhd
+    Info (12022): Found design unit 1: squen-mealy File: C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd Line: 12
+    Info (12023): Found entity 1: squen File: C:/intelFPGA_lite/19.17/termprojectvol2/squen.vhd Line: 6
+Info (12127): Elaborating entity "risc" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at risc.vhd(114): object "Rd" assigned a value but never read File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at risc.vhd(161): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at risc.vhd(164): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at risc.vhd(167): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at risc.vhd(170): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at risc.vhd(173): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at risc.vhd(176): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at risc.vhd(179): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 179
+Warning (10492): VHDL Process Statement warning at risc.vhd(182): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 182
+Warning (10492): VHDL Process Statement warning at risc.vhd(185): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at risc.vhd(188): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 188
+Warning (10492): VHDL Process Statement warning at risc.vhd(190): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at risc.vhd(191): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at risc.vhd(199): signal "tempadd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 199
+Warning (10631): VHDL Process Statement warning at risc.vhd(156): inferring latch(es) for signal or variable "O_data", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Warning (10631): VHDL Process Statement warning at risc.vhd(156): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[0]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[1]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[2]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[3]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[4]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[5]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[6]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[7]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[8]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[9]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[10]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[11]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[12]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[13]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[14]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "temp[15]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[0]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[1]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[2]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[3]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[4]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[5]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[6]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[7]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[8]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[9]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[10]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[11]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[12]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[13]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[14]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (10041): Inferred latch for "O_data[15]" at risc.vhd(156) File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+Info (12128): Elaborating entity "ir" for hierarchy "ir:m1" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 140
+Info (12128): Elaborating entity "cu" for hierarchy "cu:m2" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 141
+Warning (10036): Verilog HDL or VHDL warning at cu.vhd(27): object "opfake" assigned a value but never read File: C:/intelFPGA_lite/19.17/termprojectvol2/cu.vhd Line: 27
+Info (12128): Elaborating entity "mux4" for hierarchy "mux4:m3" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 142
+Info (12128): Elaborating entity "gpreg" for hierarchy "gpreg:m4" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 143
+Warning (10036): Verilog HDL or VHDL warning at gpreg.vhd(16): object "regs" assigned a value but never read File: C:/intelFPGA_lite/19.17/termprojectvol2/gpreg.vhd Line: 16
+Info (12128): Elaborating entity "mux" for hierarchy "mux:m5" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 144
+Info (12128): Elaborating entity "alu" for hierarchy "alu:m6" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 145
+Info (12128): Elaborating entity "mux3" for hierarchy "mux3:m7" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 146
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:m8" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at mux2.vhd(20): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 20
+Warning (10631): VHDL Process Statement warning at mux2.vhd(13): inferring latch(es) for signal or variable "F", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[0]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[1]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[2]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[3]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[4]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[5]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[6]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[7]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[8]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[9]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[10]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[11]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[12]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[13]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[14]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (10041): Inferred latch for "F[15]" at mux2.vhd(13) File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Info (12128): Elaborating entity "PC" for hierarchy "PC:m10" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 151
+Info (12128): Elaborating entity "squen" for hierarchy "squen:m12" File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 153
+Warning (14026): LATCH primitive "mux2:m8|F[1]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[2]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[3]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[4]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[5]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[6]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[7]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[8]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[9]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[10]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[11]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[12]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[13]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[14]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[15]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (14026): LATCH primitive "mux2:m8|F[0]" is permanently enabled File: C:/intelFPGA_lite/19.17/termprojectvol2/mux2.vhd Line: 13
+Warning (13012): Latch O_data[0]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[1]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[2]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[3]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[4]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[5]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[6]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[7]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[8]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[9]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[10]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[11]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[12]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[13]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[14]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Warning (13012): Latch O_data[15]$latch has unsafe behavior File: C:/intelFPGA_lite/19.17/termprojectvol2/risc.vhd Line: 156
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ir:m1|Immediate[14] File: C:/intelFPGA_lite/19.17/termprojectvol2/ir.vhd Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 368 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 306 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Fri Jul 03 01:00:30 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:36
+
+

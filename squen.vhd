@@ -1,0 +1,48 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+
+entity squen is port (
+     clk:    in STD_LOGIC;
+	  reg : in std_logic_vector(15 downto 0);--registirdan gelen 16bitlik data 
+     z:        out STD_LOGIC);
+end squen;               -- detect a 0110 sequence
+
+architecture mealy of squen is
+     type states is (a,b);
+     signal state:  states := a;  -- initial value is a
+     signal next_state:   states := a;  -- initial value
+	  signal ilk,iki,uc,dort : std_logic;
+signal tmp : std_logic_vector(15 downto 0);
+begin
+tmp(15 downto 12) <= reg(15 downto 12);
+clock:  process(clk)
+          begin
+            if clk'event and clk = '1' then
+            state <= next_state;
+            end if;
+          end process clock;
+state_trans:  process(state,tmp)   --reacts to changes in state and x
+          begin
+            next_state <= state;  --update next state
+            case state is
+               when a => if tmp(15 downto 12) = "0110" then
+                         z <= '0';
+                         next_state <=b;
+                    else
+                         next_state <= a;
+                         z <= '0';
+                    end if;
+               when b => if tmp(15 downto 12) = "0110" then
+                         next_state <= a;
+                         z <= '1';
+                    else
+								next_state <= a;
+                         z <= '0';
+ 
+                    end if;
+               
+end case;
+end process state_trans;
+end mealy;

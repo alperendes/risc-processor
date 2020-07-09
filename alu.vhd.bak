@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity ALU is
+PORT (
+		RS1,RS2,RS: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		Immediate : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		clk : IN STD_LOGIC;
+		Alu_op: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		Rd: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+	);
+end entity;
+
+architecture Behavioral of ALU is
+SIGNAL TA,TB,O,TS: STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+begin
+TA <=RS1;
+TB <=RS2;
+TS<=RS;
+
+sel_case: process(TA,TB,TS,Alu_op,O,clk)
+begin
+if rising_edge(clk) then
+case Alu_op is
+	when "0000" =>
+	O<= std_logic_vector(unsigned(TA) + unsigned(TB));
+	when "0001" =>
+	O<=std_logic_vector(unsigned(TA) - unsigned(TB));
+	when "0010" =>
+	O<=TA AND TB;
+	when "0011" =>
+	O<=TA OR TB;
+	when "0100" =>
+	O<=NOT TS;
+	when "0101" =>
+	O<=TA XOR TB;
+	when "0110" =>
+	--
+	--NOT
+	--
+	
+	when "0111" =>
+	O<=std_logic_vector(shift_left(unsigned(TA),1));
+	when "1000" =>
+	O<=std_logic_vector(shift_right(unsigned(TA),1));
+	-- DİĞER COMPONENTLER GEREKLİ 
+	end case;
+	end if;
+	end process sel_case;
+Rd<=O;
+
+end Behavioral;
